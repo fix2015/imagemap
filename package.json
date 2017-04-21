@@ -1,5 +1,5 @@
 {
-  "name": "angular2-seed",
+  "name": "angular2-map",
   "version": "1.0.0",
   "description": "A simple starter Angular2 project",
   "engines": {
@@ -8,14 +8,9 @@
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --progress --port 3000 --content-base src",
-    "start": "npm run server",
+    "start": "node server",
     "test": "karma start"
   },
-  "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
-  ],
   "license": "MIT",
   "dependencies": {
     "@angular/common": "^2.4.7",
@@ -63,7 +58,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.27",
     "zone.js": "^0.7.6"
-	
+
   },
   "devDependencies": {
     "@types/easeljs": "0.8.36",

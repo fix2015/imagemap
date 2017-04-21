@@ -3,10 +3,10 @@
 /bin/
 /data/
 /logs/
-/web/.*
+
 /.classpath
 /.project
-/web/
+
 *.db
 *.csv
 
