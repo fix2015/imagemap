@@ -1,0 +1,31 @@
+<div class="auth-page">
+  <div class="container login page">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="login-panel panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="font-size: 16pt; color: #369aea">{{'SIGN IN' | translate}}</h3>
+          </div>
+          <div class="panel-body">
+            <div *ngIf="showMessage" class="alert" [ngClass]="class">
+              {{message | translate}}
+            </div>
+            <form class="form-horizontal" role="form" [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+              <div class="form-group">
+                <label class="control-label col-xs-4" for="login">{{'Login' | translate}}</label>
+                <div class="col-xs-8" [ngClass]="{'has-error': !form.controls['login'].valid && !form.controls['login'].pristine}">
+                  <input placeholder="Login" name="login" type="text" id="login" [(ngModel)]="user.l" class="form-control" [formControl]="form.controls['login']" required>
+                </div>
+              </div>
+              <br>
+              <button class="btn btn-lg btn-primary btn-block" [disabled]="!form.valid" type="submit">{{'Sign In' | translate}}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <br>
+  <span class="col-xs-4">Your id is: <b>{{id}}</b></span>
+  <input placeholder="Enter new message" type="text" [(ngModel)]="newMessage" (change)="onChange()"/>
+  <button class="btn btn-primary" (click)="publish()">Push</button>
+  <br/>
+  <ul class="list-unstyled">
+    <li *ngFor="let item of messages">{{ item.message.text }}</li>
+  </ul>
+</div>
